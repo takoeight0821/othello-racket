@@ -131,6 +131,7 @@
     (when print? (printf "~%~a moves to ~a." (char-of player) move))
     (make-move move player board)))
 
+;; readを呼び出すとすぐに関数が終了する。まずい。
 (define (human player board)
   (printf "~%~a to move: " (char-of player))
   (let ((val (read)))
