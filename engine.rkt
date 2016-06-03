@@ -36,8 +36,7 @@
 
 (define (initial-board)
   (let ((board (make-vector 100 outer)))
-    (for/list ((square all-squares))
-      (bset! board square empty))
+    (for-each (lambda (s) (bset! board s empty)) all-squares)
     (bset! board 44 white) (bset! board 45 black)
     (bset! board 54 black) (bset! board 55 white)
     board))
